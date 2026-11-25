@@ -17,20 +17,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Windows x86
-            runner: windows-latest
-            profile: win-x86
-          - name: Linux x64
-            runner: ubuntu-22.04
-            profile: linux-x64
-          - name: Linux ARM64
-            runner: ubuntu-22.04-arm
-            profile: linux-arm64
-          - name: macOS x64
-            runner: macos-15-intel
-            profile: osx-x64
-          - name: macOS ARM64
-            runner: macos-15
+          - name: macOS ARM64 (macOS 26)
+            runner: macos-26
             profile: osx-arm64
     steps:
       - uses: actions/checkout@v6
